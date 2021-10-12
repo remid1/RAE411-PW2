@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 @app.route('/')
@@ -36,7 +36,7 @@ def add_score():
         new_score_key: new_score_value,
     }
     (data["scores"])[new_score_key] = new_score_value
-    return 200
+    return "200"
 
 
 
